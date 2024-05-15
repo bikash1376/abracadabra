@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <div class="w-full h-full bg-zinc-900 p-10 text-black">
+    <div class="w-full bg-zinc-900 p-10 text-black">
       <div class="nav mb-10">
         <a class="text-blue-500" href="/">Back to Home</a>
       </div>
@@ -18,7 +18,7 @@
         <% users.forEach(function(user) {%>
 
         <div class="user w-72 p-4 bg-zinc-800 rounded-lg">
-          <div class="w-full h-72 rounded-lg bg-zinc-600 ">
+          <div class="w-full h-72 rounded-lg bg-zinc-600">
             <img
               class="w-full h-full object-cover object-center rounded-lg"
               src="<%= user.image %>"
@@ -31,7 +31,9 @@
           <h5 class="text-gray-300 mt-2"><%= user.email %></h5>
           <div class="flex gap-3 mt-8">
             <a class="text-gray-300" href="/edit/<%= user._id %>">Edit User</a>
-            <a class="text-red-400" href="/delete/<%= user._id %>">Delete User</a>
+            <a class="text-red-400" href="/delete/<%= user._id %>"
+              >Delete User</a
+            >
           </div>
         </div>
         <% }) %>
