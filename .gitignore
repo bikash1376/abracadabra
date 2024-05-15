@@ -1,0 +1,28 @@
+# Dependency directories
+node_modules/
+
+# Environment variables file
+.env
+
+# Log files
+*.log
+
+# IDE or editor specific files
+.vscode/
+.idea/
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
+# npm debugging logs
+npm-debug.log*
+
+# yarn debugging logs
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore local configuration files
+config.local.js
