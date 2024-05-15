@@ -4,7 +4,6 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const userModel = require("./models/user");
-const cartModel = require('./models/cart');
 
 const PORT = process.env.PORT || 3000; // Use PORT from environment variable or default to 3000
 
@@ -48,20 +47,9 @@ app.post("/create", async (req, res) => {
     image,
   });
 
-  //   res.send(createdUser)
   res.redirect("/read");
 });
 
-app.post("/addtocart", async(req, res) => {
-  let { name, image} = req.body;
-
-  let addToCart = await cartModel.create({
-    name,
-    image
-  })
-  res.render('cart')
-});
-  
 
 app.listen(PORT, () => {
   console.log(`Running on http://localhost:${PORT}`);
