@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="w-full h-full bg-zinc-900 p-10 text-black">
+<body class="bg-zinc-900 p-5 text-black">
 
-        <div class="nav mb-10">
-            <a class="text-blue-500 " href="/read">Read Users</a>
+    <div class="max-w-md mx-auto">
+        <div class="nav mb-5">
+            <a class="text-blue-500" href="/read">Read Blogs</a>
         </div>
 
-        <h1 class="text-3xl tracking-tighter text-white mb-6">Create User</h1>
-        <form action="/create" method="post">
-            <input class="px-5 py-2 border-2 border-zinc--800 outline-none rounded-lg" placeholder="name" name="name" type="text" required>
-            <input class="px-5 py-2 border-2 border-zinc--800 outline-none rounded-lg" placeholder="Email" name="email" type="text" required>
-            <input class="px-5 py-2 border-2 border-zinc--800 outline-none rounded-lg" placeholder="Image url" name="image" type="text" required>
-        <input class="px-5 py-2 bg-blue-500 rounded-lg m-3 text-white" type="submit" value="Create User">
+        <h1 class="text-3xl tracking-tighter text-white mb-6 text-center">Create Blog</h1>
+        <form action="/create" method="post" class="space-y-3">
+            <input class="w-full px-5 py-2 border-2 border-zinc-800 outline-none rounded-lg" placeholder="Username" name="name" type="text" required>
+            <input class="w-full px-5 py-2 border-2 border-zinc-800 outline-none rounded-lg" placeholder="Blog Title" name="blogtitle" type="text" required>
+            <input class="w-full px-5 py-2 border-2 border-zinc-800 outline-none rounded-lg" placeholder="Image URL" name="image" type="text" required>
+            <textarea class="w-full px-5 py-2 border-2 border-zinc-800 outline-none rounded-lg" placeholder="Add Blog Content" name="blog" rows="5" required></textarea>
+            <input class="w-full px-5 py-2 bg-blue-500 rounded-lg text-white" type="submit" value="Add Blog">
         </form>
     </div>
+    <%- include('footer') %>
 </body>
-
 </html>

@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="w-full h-full bg-zinc-900 p-10 text-black">
+<body class="bg-zinc-900 p-5 text-black">
 
-        <div class="nav mb-10">
-            <a class="text-blue-500 " href="/read">Read Users</a>
-        </div>
+        <div class="max-w-md mx-auto">
+            <div class="nav mb-5">
+                <a class="text-blue-500" href="/read">Read Blogs</a>
+            </div>
 
-        <h1 class="text-3xl tracking-tighter text-white mb-6">Update User</h1>
-        <form action="/update/<%= user._id %>" method="post">
-            <input class="px-5 py-2 border-2 border-zinc--800 outline-none rounded-lg" placeholder="name" name="name" type="text" value="<%= user.name %>">
-            <input class="px-5 py-2 border-2 border-zinc--800 outline-none rounded-lg" placeholder="Email" name="email" type="text" value="<%= user.email %>">
-            <input class="px-5 py-2 border-2 border-zinc--800 outline-none rounded-lg" placeholder="Image url" name="image" type="text" value="<%= user.image %>">
-        <input class="px-5 py-2 bg-yellow-500 rounded-lg m-3 text-white" type="submit" value="Update User">
+        <h1 class="text-3xl tracking-tighter text-white mb-6 text-center">Update Blog</h1>
+        <form action="/update/<%= user._id %>" method="post" class="space-y-3">
+            <input class="w-full px-5 py-2 border-2 border-zinc--800 outline-none rounded-lg" placeholder="Name" name="name" type="text" value="<%= user.name %>">
+            <input class="w-full px-5 py-2 border-2 border-zinc--800 outline-none rounded-lg" placeholder="Blog Title" name="blogtitle" type="text" value="<%= user.blogtitle %>">
+            <input class="w-full px-5 py-2 border-2 border-zinc--800 outline-none rounded-lg" placeholder="Image URL" name="image" type="text" value="<%= user.image %>">
+            <textarea class="w-full px-5 py-2 border-2 border-zinc--800 outline-none rounded-lg" name="blog" rows="5" ><%= user.blog %></textarea>
+            <input class="w-full px-5 py-2 bg-yellow-500 rounded-lg text-white" type="submit" value="Update Blog">
         </form>
-    </div>
+        <%- include('footer') %>
 </body>
 
 </html>

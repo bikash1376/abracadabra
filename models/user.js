@@ -5,8 +5,9 @@ mongoose.connect('mongodb+srv://bksh2674:jKX6a9do8HrFN6Gu@cluster0.qmxuyle.mongo
 
 const userSchema = mongoose.Schema({
     name : String,
-    email: String,
-    image: String
+    blogtitle: String,
+    image: String,
+    blog: String,
 })
 
 
